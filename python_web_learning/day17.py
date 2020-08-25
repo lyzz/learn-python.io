@@ -8,14 +8,14 @@ headers = {
     "User-Agent": "Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14"
 }
 
-f = open("软件测试工程师.cvs","w",newline="")
+f = open("软件测试工程师20200813.cvs","w",newline="")
 writer = csv.writer(f)
 writer.writerow(['编号','职位名', '公司名', '工作地点', '薪资',  '发布时间'])
 
 i = 1
 for page in range(1,42):
     requests_get = requests.get(
-        f"https://search.51job.com/list/020000,000000,0000,00,9,99,%25E8%25BD%25AF%25E4%25BB%25B6%25E6%25B5%258B%25E8%25AF%2595%25E5%25B7%25A5%25E7%25A8%258B%25E5%25B8%2588,2,1.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=",headers=headers
+        f"https://search.51job.com/list/020000,000000,0000,00,9,99,%25E8%25BD%25AF%25E4%25BB%25B6%25E6%25B5%258B%25E8%25AF%2595%25E5%25B7%25A5%25E7%25A8%258B%25E5%25B8%2588,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare=",headers=headers
         )
     requests_get.encoding="GBK"
     if requests_get.status_code == 200:
