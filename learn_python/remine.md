@@ -18,7 +18,7 @@
 ```python
   if True:
     print('正确的书写')
-  else: 
+  else:
     print("111")      # 缩进不一致也会报错
 ```
 
