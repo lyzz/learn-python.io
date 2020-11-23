@@ -1,7 +1,7 @@
 def get_city_code():
     from selenium import webdriver
     import requests
-    driver = webdriver.Chrome()
+    r = webdriver.Chrome()
   
 
     url = 'https://js.51jobcdn.com/in/js/h5/dd/d_jobarea.js?20191212'
